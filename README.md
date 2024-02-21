@@ -1,5 +1,7 @@
 <img src="icon.png">
 
+![img.png](img.png)
+
 # Tomb Raider Wardrobe
 - Simple mod for **Tomb Raider I-III Remastered** that allows you to change Lara's outfit in-game.
 - App is written in .NET 8 as WPF application and can be changed according to your needs
