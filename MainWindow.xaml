@@ -5,13 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TRWardrobe"
         mc:Ignorable="d"
-        Title="Lara's Croft Wardrobe" Height="450" Width="800" ResizeMode="NoResize">
+        Title="Tomb Raider Wardrobe" Height="900" Width="1600" ResizeMode="NoResize"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        WindowStartupLocation="CenterScreen">
+
+
     <Grid>
+
+
         <Grid.Background>
-            <ImageBrush ImageSource="https://i.ytimg.com/vi/68hISohBKmI/maxresdefault.jpg" />
+            <ImageBrush x:Name="BackgroundImageBrush" ImageSource="{Binding CurrentImage}" Stretch="UniformToFill" />
         </Grid.Background>
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
@@ -21,41 +28,96 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        
+
         <!-- <TextBlock Margin="0 10 0 10" Grid.Row="0" Grid.Column="0" Foreground="White" Text="Tomb Raider 1" HorizontalAlignment="Center" VerticalAlignment="Top" /> -->
         <!-- <TextBlock Margin="0 10 0 10" Grid.Row="0" Grid.Column="1" Foreground="White" Text="Tomb Raider 2" HorizontalAlignment="Center" VerticalAlignment="Top" /> -->
-        <!-- <TextBlock Margin="0 10 0 10" Grid.Row="0" Grid.Column="2" Foreground="White" Text="Tomb Raider 3" HorizontalAlignment="Center" VerticalAlignment="Top" /> -->
+        <!--  -->
 
-        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" >
-            <StackPanel Width="150" HorizontalAlignment="Left" Margin="0">
-                <StackPanel.Background>
-                    <SolidColorBrush Color="#000000" Opacity="0.8" />
-                </StackPanel.Background>
-                    <RadioButton Margin="5"  Width="130" VerticalContentAlignment="Center" Checked="OnRadioChecked" Background="Chocolate" Foreground="White" Tag="classic"          Content="Classic" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <RadioButton Margin="5"  Width="130" VerticalContentAlignment="Center"  Checked="OnRadioChecked" Background="Chocolate" Foreground="White" Tag="tr1training"     Content="[TR1] Training" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <RadioButton Margin="5"  Width="130" VerticalContentAlignment="Center"  Checked="OnRadioChecked" Background="Chocolate" Foreground="White" Tag="tr2training"     Content="[TR2] Training" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <RadioButton Margin="5"  Width="130" VerticalContentAlignment="Center"  Checked="OnRadioChecked" Background="Chocolate" Foreground="White" Tag="tr2classic"      Content="[TR2] Classic" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <RadioButton Margin="5"  Width="130" VerticalContentAlignment="Center"  Checked="OnRadioChecked" Background="Chocolate" Foreground="White" Tag="winter"          Content="[TR2] Winter Jacket" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <RadioButton Margin="5"  Width="130" VerticalContentAlignment="Center"  Checked="OnRadioChecked" Background="Chocolate" Foreground="White" Tag="swim"            Content="[TR2] Swim Suit" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <RadioButton Margin="5"  Width="130" VerticalContentAlignment="Center"  Checked="OnRadioChecked" Background="Chocolate" Foreground="White" Tag="tr2home"         Content="[TR2] Home" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <RadioButton Margin="5"  Width="130" VerticalContentAlignment="Center"  Checked="OnRadioChecked" Background="Chocolate" Foreground="White" Tag="tr3training"     Content="[TR3] Training" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <RadioButton Margin="5"  Width="130" VerticalContentAlignment="Center"  Checked="OnRadioChecked" Background="Chocolate" Foreground="White" Tag="antar"           Content="[TR3] Antarctica" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <RadioButton Margin="5"  Width="130" VerticalContentAlignment="Center"  Checked="OnRadioChecked" Background="Chocolate" Foreground="White" Tag="cat"             Content="[TR3] Cat Suit" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <RadioButton Margin="5"  Width="130" VerticalContentAlignment="Center"  Checked="OnRadioChecked" Background="Chocolate" Foreground="White" Tag="pacific"         Content="[TR3] Pacific" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <RadioButton Margin="5"  Width="130" VerticalContentAlignment="Center"  Checked="OnRadioChecked" Background="Chocolate" Foreground="White" Tag="nevada"          Content="[TR3] Nevada" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            </StackPanel>
-            <Button Click="Restore" Padding="5" Margin="20" Content="Restore" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
-        </Grid>
-        
-        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
-            <StackPanel Margin="10">
-            <TextBlock HorizontalAlignment="Center" Margin="0" Foreground="Chocolate" Text="created by Freeman" />
-            <TextBlock HorizontalAlignment="Center" Margin="0" Foreground="Chocolate" Text="" />
-            <TextBlock HorizontalAlignment="Center" Margin="0" Foreground="Chocolate" Text="exe icon created by deviantart.com/andonovmarko/" />
-            </StackPanel>
+        <Menu DockPanel.Dock="Top" Grid.ColumnSpan="3">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit" Click="UI_Exit" />
+            </MenuItem>
+            <MenuItem Header="Settings">
+                <MenuItem Header="Reset outfits" Click="UI_RestoreBackup" />
+                <MenuItem Header="Reset textures" Click="UI_ResetTextures" />
+            </MenuItem>
+            <MenuItem Header="About" Click="UI_Exit" />
+        </Menu>
+
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3">
+            <ScrollViewer>
+                <StackPanel Width="150" HorizontalAlignment="Left" Margin="0">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="#000000" Opacity="0.8" />
+                    </StackPanel.Background>
+                    <TextBlock HorizontalAlignment="Center" Margin="5" Foreground="Chocolate" Text="FoxApo | 2024" />
+                    <TextBlock Margin="0 0 0 10" Grid.Row="0" Grid.Column="2" Foreground="White" Text="Vanilla Outfits"
+                               HorizontalAlignment="Center" VerticalAlignment="Top" />
+                    <RadioButton GroupName="OutfitGroup" Margin="5" Width="130" VerticalContentAlignment="Center"
+                                 MouseEnter="UI_OnRadioMouseEnter" Checked="UI_OnRadioChecked" Background="Chocolate"
+                                 Foreground="White" Tag="tr1training" Content="[TR1] Training"
+                                 HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <RadioButton GroupName="OutfitGroup" Margin="5" Width="130" VerticalContentAlignment="Center"
+                                 MouseEnter="UI_OnRadioMouseEnter" Checked="UI_OnRadioChecked" Background="Chocolate"
+                                 Foreground="White" Tag="tr2training" Content="[TR2] Training"
+                                 HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <RadioButton GroupName="OutfitGroup" Margin="5" Width="130" VerticalContentAlignment="Center"
+                                 MouseEnter="UI_OnRadioMouseEnter" Checked="UI_OnRadioChecked" Background="Chocolate"
+                                 Foreground="White" Tag="tr2classic" Content="[TR2] Classic"
+                                 HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <RadioButton GroupName="OutfitGroup" Margin="5" Width="130" VerticalContentAlignment="Center"
+                                 MouseEnter="UI_OnRadioMouseEnter" Checked="UI_OnRadioChecked" Background="Chocolate"
+                                 Foreground="White" Tag="winter" Content="[TR2] Winter Jacket"
+                                 HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <RadioButton GroupName="OutfitGroup" Margin="5" Width="130" VerticalContentAlignment="Center"
+                                 MouseEnter="UI_OnRadioMouseEnter" Checked="UI_OnRadioChecked" Background="Chocolate"
+                                 Foreground="White" Tag="swim" Content="[TR2] Swim Suit" HorizontalAlignment="Center"
+                                 VerticalAlignment="Center" />
+                    <RadioButton GroupName="OutfitGroup" Margin="5" Width="130" VerticalContentAlignment="Center"
+                                 MouseEnter="UI_OnRadioMouseEnter" Checked="UI_OnRadioChecked" Background="Chocolate"
+                                 Foreground="White" Tag="tr2home" Content="[TR2] Home" HorizontalAlignment="Center"
+                                 VerticalAlignment="Center" />
+                    <RadioButton GroupName="OutfitGroup" Margin="5" Width="130" VerticalContentAlignment="Center"
+                                 MouseEnter="UI_OnRadioMouseEnter" Checked="UI_OnRadioChecked" Background="Chocolate"
+                                 Foreground="White" Tag="tr3training" Content="[TR3] Training"
+                                 HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <RadioButton GroupName="OutfitGroup" Margin="5" Width="130" VerticalContentAlignment="Center"
+                                 MouseEnter="UI_OnRadioMouseEnter" Checked="UI_OnRadioChecked" Background="Chocolate"
+                                 Foreground="White" Tag="antar" Content="[TR3] Antarctica" HorizontalAlignment="Center"
+                                 VerticalAlignment="Center" />
+                    <RadioButton GroupName="OutfitGroup" Margin="5" Width="130" VerticalContentAlignment="Center"
+                                 MouseEnter="UI_OnRadioMouseEnter" Checked="UI_OnRadioChecked" Background="Chocolate"
+                                 Foreground="White" Tag="cat" Content="[TR3] Cat Suit" HorizontalAlignment="Center"
+                                 VerticalAlignment="Center" />
+                    <RadioButton GroupName="OutfitGroup" Margin="5" Width="130" VerticalContentAlignment="Center"
+                                 MouseEnter="UI_OnRadioMouseEnter" Checked="UI_OnRadioChecked" Background="Chocolate"
+                                 Foreground="White" Tag="pacific" Content="[TR3] Pacific" HorizontalAlignment="Center"
+                                 VerticalAlignment="Center" />
+                    <RadioButton GroupName="OutfitGroup" Margin="5" Width="130" VerticalContentAlignment="Center"
+                                 MouseEnter="UI_OnRadioMouseEnter" Checked="UI_OnRadioChecked" Background="Chocolate"
+                                 Foreground="White" Tag="nevada" Content="[TR3] Nevada" HorizontalAlignment="Center"
+                                 VerticalAlignment="Center" />
+                    <TextBlock Margin="0 10 0 10" Grid.Row="0" Grid.Column="2" Foreground="White" Text="Third Party"
+                               HorizontalAlignment="Center" VerticalAlignment="Top" />
+                    <ItemsControl ItemsSource="{Binding ModdedOutfits}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <RadioButton GroupName="OutfitGroup" Margin="5" Width="130"
+                                             VerticalContentAlignment="Center" Checked="UI_OnRadioChecked"
+                                             Background="Chocolate" Foreground="White" Tag="{Binding Key}"
+                                             Content="{Binding DisplayName}" HorizontalAlignment="Center"
+                                             VerticalAlignment="Center" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </ScrollViewer>
+
         </Grid>
 
-        <!-- Third row for buttons -->
-        
+        <Grid ZIndex="10" Grid.Row="1" Grid.Column="2" Grid.RowSpan="3" VerticalAlignment="Top"
+              HorizontalAlignment="Right">
+            <Image Source="{Binding Logo}" Width="450"></Image>
+        </Grid>
     </Grid>
 </Window>
