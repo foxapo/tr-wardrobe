@@ -218,9 +218,9 @@ public static class OutfitUtils
         {
             RestoreTextures(texture);
             return;
-        }
+        }   
 
-        string validatedKey = key.Replace("_MODDED", "");
+        var validatedKey = key.Replace("_MODDED", "");
 
         for (int i = 1; i < 4; i++)
         {
