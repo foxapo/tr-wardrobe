@@ -14,13 +14,24 @@
 - App is written in .NET 8 as WPF application and can be changed according to your needs
 
 ## Installation
-- Place the `TRWardrobe.exe` in the game's root folder
+- Extract _BUILD/TRWardrobe_0_2.7z to the game root folder
 - Start the app and select your outfit
 - Close the app and start the game
 - ENJOY
+- 
+### Currently available outfits & verified
+```
+- Vanilla
+- Jessie Cosplay [https://www.nexusmods.com/tombraidertrilogyremastered/mods/83] (Only textures)
+- Sola Wetsuit [https://www.nexusmods.com/tombraidertrilogyremastered/mods/23] (Only textures)
+- AOD Shorts [https://www.nexusmods.com/tombraidertrilogyremastered/mods/43] (Textures extracted to the vanila folders)
+- TR Legends [https://www.nexusmods.com/tombraidertrilogyremastered/mods/61] (Textures extracted to the vanila folders)
+- Lara Battlesuit [https://www.nexusmods.com/tombraidertrilogyremastered/mods/46] (Only textures)
+- Hair Collection [https://www.nexusmods.com/tombraidertrilogyremastered/mods/21] (Not implemented yet, but it works)
+```
 
 ## Example of the configuration
-
+- You can of course add your own outfits. It would be cool to have some standardized way of adding new outfits so we could keep things consistent. 
 ### Folder Structure
 ```bash
 MOD_OUTFITS/
