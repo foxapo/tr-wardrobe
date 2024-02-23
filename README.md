@@ -40,21 +40,16 @@ MOD_OUTFITS/
 ├── OUTFIT_AOD.TRM
 ├── OUTFIT_TR_LEGENDS.TRM
 ├── battlesuit
-│   ├── 1
-│   │   └── TEX
-│   │       ├── 8110.DDS
-│   │       ├── 8111.DDS
-│   │       └── 8112.DDS
-│   ├── 8110.DDS
-│   ├── 8111.DDS
-│   └── 8112.DDS
+│   └── 1
+│       └── TEX
+│           ├── 8110.DDS
+│           ├── 8111.DDS
+│           └── 8112.DDS
 ├── jessie
-│   ├── 1
-│   │   └── TEX
-│   │       ├── 8003.dds
-│   │       └── 8040.dds
-│   ├── 8003.dds
-│   └── 8040.dds
+│   └── 1
+│       └── TEX
+│           ├── 8003.dds
+│           └── 8040.dds
 └── tr2Sola
     └── 1
         └── TEX
