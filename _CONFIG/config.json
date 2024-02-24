@@ -1,0 +1,121 @@
+{
+  "CurrentOutfit": "",
+  "VanillaOutfits": [
+    {
+      "Key": "tr1classic",
+      "Filename": "OUTFIT_TR1_CLASSIC.TRM",
+      "DisplayName": "[TR1] Classic",
+      "IsOnlyTexture": false
+    },
+    {
+      "Key": "tr1training",
+      "Filename": "OUTFIT_TR1_GYM.TRM",
+      "DisplayName": "[TR1] Training",
+      "IsOnlyTexture": false
+    },
+    {
+      "Key": "tr2training",
+      "Filename": "OUTFIT_TR2_GYM.TRM",
+      "DisplayName": "[TR2] Training",
+      "IsOnlyTexture": false
+    },
+    {
+      "Key": "tr3training",
+      "Filename": "OUTFIT_TR3_GYM.TRM",
+      "DisplayName": "[TR3] Classic",
+      "IsOnlyTexture": false
+    },
+    {
+      "Key": "tr2classic",
+      "Filename": "OUTFIT_TR2_CLASSIC.TRM",
+      "DisplayName": "[TR2] Classic",
+      "IsOnlyTexture": false
+    },
+    {
+      "Key": "tr2home",
+      "Filename": "OUTFIT_TR2_HOME.TRM",
+      "DisplayName": "[TR2] Swim Suit",
+      "IsOnlyTexture": false
+    },
+    {
+      "Key": "swim",
+      "Filename": "OUTFIT_TR2_SWIM.TRM",
+      "DisplayName": "[TR2] Home",
+      "IsOnlyTexture": false
+    },
+    {
+      "Key": "winter",
+      "Filename": "OUTFIT_TR2_TIBET.TRM",
+      "DisplayName": "[TR3] Winter Jacket",
+      "IsOnlyTexture": false
+    },
+    {
+      "Key": "antar",
+      "Filename": "OUTFIT_TR3_ANTARC.TRM",
+      "DisplayName": "[TR3] Antarctica",
+      "IsOnlyTexture": false
+    },
+    {
+      "Key": "cat",
+      "Filename": "OUTFIT_TR3_CATSUIT.TRM",
+      "DisplayName": "[TR3] Cat Suit",
+      "IsOnlyTexture": false
+    },
+    {
+      "Key": "pacific",
+      "Filename": "OUTFIT_TR3_COAST.TRM",
+      "DisplayName": "[TR3] Pacific",
+      "IsOnlyTexture": false
+    },
+    {
+      "Key": "nevada",
+      "Filename": "OUTFIT_TR3_NEVADA.TRM",
+      "DisplayName": "[TR3] Nevada",
+      "IsOnlyTexture": false
+    }
+  ],
+  "ModdedOutfits": [
+    {
+      "Key": "tr2Sola_MODDED",
+      "Filename": "OUTFIT_TR2_SWIM.TRM",
+      "DisplayName": "[TR2] Swim Sola",
+      "IsOnlyTexture": true,
+      "Textures": [
+        "8060.DDS"
+      ]
+    },
+    {
+      "Key": "aod_MODDED",
+      "Filename": "OUTFIT_AOD.TRM",
+      "DisplayName": "[TR AOD] Classic",
+      "IsOnlyTexture": false
+    },
+    {
+      "Key": "trlegend_MODDED",
+      "Filename": "OUTFIT_TR_LEGENDS.TRM",
+      "DisplayName": "[TR Legends] Classic",
+      "IsOnlyTexture": false
+    },
+    {
+      "Key": "battlesuit_MODDED",
+      "Filename": "OUTFIT_TR3_CATSUIT.TRM",
+      "DisplayName": "[TR2] Battle Suit",
+      "IsOnlyTexture": true,
+      "Textures": [
+        "8112.DDS",
+        "8111.DDS",
+        "8110.DDS"
+      ]
+    },
+    {
+      "Key": "jessie_MODDED",
+      "Filename": "JESSIE.TRM",
+      "DisplayName": "[TR2] Jessie Raider",
+      "IsOnlyTexture": false,
+      "Textures": [
+        "8003.DDS",
+        "8040.DDS"
+      ]
+    }
+  ]
+}

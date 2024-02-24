@@ -29,6 +29,8 @@
 - Lara Battlesuit [https://www.nexusmods.com/tombraidertrilogyremastered/mods/46] (Only textures)
 - Hair Collection [https://www.nexusmods.com/tombraidertrilogyremastered/mods/21] (Not implemented yet, but it works)
 ```
+### You can now use the outfits as part of this packet
+- I have added the outfits to _CONFIG folder wiht an example of the Config.json file
 
 ## Example of the configuration
 - You can of course add your own outfits. It would be cool to have some standardized way of adding new outfits so we could keep things consistent. 
@@ -115,7 +117,7 @@ MOD_OUTFITS/
   related files inside
 - When you start the app, you can choose the outfit and all the outfits in the game are replaced by this outfit so you
   can be sure that your desired outfit will be across the all games.
-- If you want to set default outfits, just press "RESTORE"
+- If you want to set default outfits, just press _Settings -> Reset Outfits or Reset Textures_
 
 ## Requirements
 - .NET 8 Runtime

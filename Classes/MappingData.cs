@@ -1,40 +1,70 @@
-﻿namespace TRWardrobe.Classes;
-
-public class MappingData
+﻿namespace TRWardrobe.Classes
 {
-    public string CurrentOutfit { get; set; } = "";
-
-    public List<MappingObject> VanillaOutfits { get; set; } = new()
+    /// <summary>
+    /// Represents the mapping data for outfits.
+    /// </summary>
+    public class MappingData
     {
-        new MappingObject("tr1classic", "OUTFIT_TR1_CLASSIC.TRM", "[TR1] Classic"),
-        new MappingObject("tr1training", "OUTFIT_TR1_GYM.TRM", "[TR1] Training"),
-        new MappingObject("tr2training", "OUTFIT_TR2_GYM.TRM", "[TR2] Training"),
-        new MappingObject("tr3training", "OUTFIT_TR3_GYM.TRM", "[TR2] Classic"),
-        new MappingObject("tr2classic", "OUTFIT_TR2_CLASSIC.TRM", "[TR2] Winter Jacket"),
-        new MappingObject("tr2home", "OUTFIT_TR2_HOME.TRM", "[TR2] Swim Suit"),
-        new MappingObject("swim", "OUTFIT_TR2_SWIM.TRM", "[TR2] Home"),
-        new MappingObject("winter", "OUTFIT_TR2_TIBET.TRM", "[TR3] Training"),
-        new MappingObject("antar", "OUTFIT_TR3_ANTARC.TRM", "[TR3] Antarctica"),
-        new MappingObject("cat", "OUTFIT_TR3_CATSUIT.TRM", "[TR3] Cat Suit"),
-        new MappingObject("pacific", "OUTFIT_TR3_COAST.TRM", "[TR3] Pacific"),
-        new MappingObject("nevada", "OUTFIT_TR3_NEVADA.TRM", "[TR3] Nevada"),
-    };
+        /// <summary>
+        /// Gets or sets the current outfit.
+        /// </summary>
+        public string CurrentOutfit { get; set; } = "";
 
-    public List<MappingObject> ModdedOutfits { get; set; } = new();
-}
+        /// <summary>
+        /// Gets or sets the list of vanilla outfits.
+        /// </summary>
+        public List<MappingObject> VanillaOutfits { get; set; } = new()
+        {
+            // Initialize the list with some default outfits.
+        };
 
-public class MappingObject
-{
-    public string Key { get; set; } = "";
-    public string Filename { get; set; } = "";
-    public string DisplayName { get; set; } = "";
-    public bool IsOnlyTexture { get; set; } = false;
-    public List<string>? Textures { get; set; } = null;
+        /// <summary>
+        /// Gets or sets the list of modded outfits.
+        /// </summary>
+        public List<MappingObject> ModdedOutfits { get; set; } = new();
+    }
 
-    public MappingObject(string key, string filename, string displayName)
+    /// <summary>
+    /// Represents an outfit mapping object.
+    /// </summary>
+    public class MappingObject
     {
-        Key = key;
-        Filename = filename;
-        DisplayName = displayName;
+        /// <summary>
+        /// Gets or sets the key of the outfit.
+        /// </summary>
+        public string Key { get; set; } = "";
+
+        /// <summary>
+        /// Gets or sets the filename of the outfit.
+        /// </summary>
+        public string Filename { get; set; } = "";
+
+        /// <summary>
+        /// Gets or sets the display name of the outfit.
+        /// </summary>
+        public string DisplayName { get; set; } = "";
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the outfit is only a texture.
+        /// </summary>
+        public bool IsOnlyTexture { get; set; } = false;
+
+        /// <summary>
+        /// Gets or sets the list of textures for the outfit.
+        /// </summary>
+        public List<string>? Textures { get; set; } = null;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MappingObject"/> class.
+        /// </summary>
+        /// <param name="key">The key of the outfit.</param>
+        /// <param name="filename">The filename of the outfit.</param>
+        /// <param name="displayName">The display name of the outfit.</param>
+        public MappingObject(string key, string filename, string displayName)
+        {
+            Key = key;
+            Filename = filename;
+            DisplayName = displayName;
+        }
     }
 }
